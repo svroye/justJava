@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Sólo Java</string>
+    <!-- title for the toppings -->
+    <string name="topping">Cubierta</string>
+    <!-- checkbox label for chocolate -->
+    <string name="chocolate">Chocolate</string>
+    <!-- text for the button for placing the order -->
+    <string name="order">Pedir</string>
+    <!--quantity label -->
+    <string name="quantity">Cantidad</string>
+    <!--label for the whipped cream checkbox -->
+    <string name="whipped_cream">Crema batida</string>
+    <!-- name field with variable as shown in the order summary-->
+    <string name="name_summary">Nombre: <xliff:g id="name" example="Amy">%s</xliff:g></string>
+    <!--Thank you label as shown in the summary -->
+    <string name="thank_you">¡Gracias!</string>
+    <!-- add whipped creme label as shown in the summary -->
+    <string name="add_whipped_cream">"¿Agregue la crema batida? "</string>
+    <!--add chocolate label as shown in the summary -->
+    <string name="add_chocolate">"¿Agregue el chocolate? "</string>
+    <!-- total label as shown in the summary -->
+    <string name="total">"Total: "</string>
+    <!-- hint for the edittext for entering a name-->
+    <string name="name_hint">Nombre</string>
+    <!--Quantity label as shown in the summary -->
+    <string name="quantity_summary">"Cantidad: "</string>
+</resources>
