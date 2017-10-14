@@ -24,36 +24,24 @@
             android:inputType="textCapWords" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/topping"
-            android:layout_marginBottom="16dp"
-            android:textAllCaps="true"/>
+            style="@style/labelTextView"
+            android:text="@string/topping"/>
 
         <CheckBox
+            style="@style/checkBoxStyle"
             android:id="@+id/whipped_cream"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/whipped_cream"
-            android:textSize="16sp"
-            android:paddingLeft="24dp"/>
+            android:text="@string/whipped_cream"/>
 
         <CheckBox
+            style="@style/checkBoxStyle"
             android:id="@+id/chocolat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/chocolate"
-            android:textSize="16sp"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="24dp"/>
+            android:layout_marginTop="8dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/labelTextView"
             android:text="@string/quantity"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:textAllCaps="true"/>
+            android:layout_marginTop="16dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,12 +75,9 @@
 
         <!--
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/labelTextView"
             android:text="Order summary"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:textAllCaps="true"/>
+            android:layout_marginTop="16dp"/>
 
         <TextView
             android:id="@+id/order_summary_text_view"
