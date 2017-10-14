@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,10 +23,14 @@ public class MainActivity extends AppCompatActivity {
      * @param view: the view to update
      */
     public void submitOrder(View view){
+        // get the checkbox for whipped cream and its value
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream);
         boolean whippedCream = whippedCreamCheckBox.isChecked();
+        // get the text from the name field and its value
+        EditText nameEditText = (EditText) findViewById(R.id.edit_text_name);
+        String name = nameEditText.getText().toString();
         int price = calculatePrice();
-        String summary = createOrderSummary(price, whippedCream);
+        String summary = createOrderSummary(price, whippedCream, name);
         displayMessage(summary);
     }
 
@@ -62,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
      * @param price total price of the order
      * @return summary of the order, including name, quantity, price
      */
-    private String createOrderSummary(int price, boolean whippedCream){
-        String summary = "Name: Steven Van Roye" +
+    private String createOrderSummary(int price, boolean whippedCream, String name){
+        String summary = "Name: " + name +
                 "\nAdd whipped cream? " + whippedCream +
                 "\nQuantity: " + quantity +
                 "\nTotal: " +  NumberFormat.getCurrencyInstance().format(price) +
