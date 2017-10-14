@@ -26,11 +26,17 @@ public class MainActivity extends AppCompatActivity {
         // get the checkbox for whipped cream and its value
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream);
         boolean whippedCream = whippedCreamCheckBox.isChecked();
+
+        // get the checkbox for chocolat and its value
+        CheckBox chocolatCheckBox = (CheckBox) findViewById(R.id.chocolat);
+        boolean chocolat = chocolatCheckBox.isChecked();
+
         // get the text from the name field and its value
         EditText nameEditText = (EditText) findViewById(R.id.edit_text_name);
         String name = nameEditText.getText().toString();
+
         int price = calculatePrice();
-        String summary = createOrderSummary(price, whippedCream, name);
+        String summary = createOrderSummary(price, whippedCream, chocolat, name);
         displayMessage(summary);
     }
 
@@ -67,9 +73,10 @@ public class MainActivity extends AppCompatActivity {
      * @param price total price of the order
      * @return summary of the order, including name, quantity, price
      */
-    private String createOrderSummary(int price, boolean whippedCream, String name){
+    private String createOrderSummary(int price, boolean whippedCream, boolean chocolat, String name){
         String summary = "Name: " + name +
                 "\nAdd whipped cream? " + whippedCream +
+                "\nAdd chocolat? " + chocolat +
                 "\nQuantity: " + quantity +
                 "\nTotal: " +  NumberFormat.getCurrencyInstance().format(price) +
                 "\nThank you!";
